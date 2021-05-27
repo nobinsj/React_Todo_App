@@ -2,13 +2,9 @@
 
 In the project directory, you can run:
 
-#### Clone this repository
+### `git clone https://github.com/nobinsj/React_Todo_App.git`
 
-git clone https://github.com/nobinsj/React_Todo_App.git
-
-#### Change Directory
-
-cd React_Todo_App
+### `cd React_Todo_App`
 
 ### `npm install`
 
