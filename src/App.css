@@ -1,0 +1,51 @@
+
+.Scroll{
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.content{
+  margin-top: 40px;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #383335; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(243, 241, 241); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(241, 243, 240); 
+}
+
+/* .Scroll::-webkit-scrollbar{
+  display:none;
+} */
+
+.NavBar {
+  color: antiquewhite;
+  background-color: rgb(21, 6, 34);
+  top: 0;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.Title{
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 25px;
+  
+}
