@@ -1,3 +1,4 @@
+import "./App.css";
 import Todo from "./Components/Todo/Todo";
 import View from "./Components/View/View";
 import { useState } from "react";
@@ -21,23 +22,34 @@ function App() {
     const NewTodos = toDos.filter((text, index) => index !== key);
     setToDos(NewTodos);
   };
+
   return (
     <div>
-      <h3>React Todo App</h3>
-      <Todo toDo={toDo} setTodo={setTodo} addTodo={() => addTodo()} />
-      {toDos.map(({ text, status }, key) => {
-        return (
-          <View
-            key={key}
-            text={text}
-            status={status}
-            completeTodo={() => completeTodo(key)}
-            deleteTodo={() => {
-              deleteTodo(key);
-            }}
-          />
-        );
-      })}
+      <div className="NavBar">
+        <h3 className="Title">React Todo App</h3>
+      </div>
+      <div className="container">
+        <Todo toDo={toDo} setTodo={setTodo} addTodo={() => addTodo()} />
+
+        <div className="Scroll content">
+          <div className="data">
+            {toDos.map(({ text, status }, key) => {
+              return (
+                <View
+                  key={key}
+                  text={text}
+                  status={status}
+                  completeTodo={() => completeTodo(key)}
+                  deleteTodo={() => {
+                    deleteTodo(key);
+                  }}
+                />
+              );
+            })}
+          </div>
+        </div>
+        {console.log(toDos)}
+      </div>
     </div>
   );
 }
